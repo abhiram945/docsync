@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import './App.css'
 const Nav = () => {
     return <>
         <nav>
-            <a className="flex alignCenter" href="/">
+            <a className="flex alignCenter" href="/docsync/">
                 <img src="assets/logo.jpg" alt="logo" />
                 <h1>DocShare</h1>
             </a>
@@ -65,7 +65,7 @@ print("Decrypted:", decrypted)
                 </div>
                 <div className="codeContainer">
                     <p onClick={(e)=>{setCopy(!copy);navigator.clipboard.writeText(exp1CodeString)}}>{copy ? 'Copied':'Copy code'}</p>
-                    <SyntaxHighlighter language="python" style={atomOneDark} customStyle={{paddingLeft:'1rem', }}>
+                    <SyntaxHighlighter language="python" style={docco} customStyle={{paddingLeft:'1rem', }}>
                         {exp1CodeString}
                     </SyntaxHighlighter>
                 </div>

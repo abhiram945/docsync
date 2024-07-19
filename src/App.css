@@ -51,14 +51,16 @@ a h1{
 }
 .codeContainer p{
     background-color: #0B0B2C;
-    text-align: right;
     color: #ffffff;
     padding:0.5rem 1rem;
+    margin-left: auto;
+    width: max-content;
     cursor: pointer;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
 }
 .codeContainer pre{
+    border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
