@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0B0B2C;
+}
+.flex{
+    display: flex;
+}
+.alignCenter{
+    align-items: center;
+}
+nav{
+    width: 100%;
+}
+a{
+    width: max-content;
+    padding:2rem 5rem;
+}
+a img{
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+a h1{
+    font-size: 1.75rem;
+}
+.mainContainer{
+    width: 100%;
+    height: auto;
+}
+.mainContainer .expContainer{
+    margin:0 0 1rem 0;
+}
+.mainContainer .expContainer .headingContainer{
+    display: flex;
+    padding: 0 5rem;
+}
+.mainContainer .expContainer .headingContainer h1 span{
+    color: #2C23D2;
+}
+.expContainer .headingContainer p{
+    color: #2C23D2;
+    font-size: 2rem;
+    margin-left: 0.75rem;
+}
+.expContainer .codeContainer{
+    width: 50%;
+    margin: 0 auto;
+}
+.codeContainer p{
+    background-color: #0B0B2C;
+    text-align: right;
+    color: #ffffff;
+    padding:0.5rem 1rem;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.codeContainer pre{
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:480px){
+    a{
+        padding:0.75rem
+    }
+    .mainContainer .expContainer .headingContainer{
+        padding: 0 0.5rem;
+        flex-direction: column;
+    }
+    .headingContainer h1{
+        font-size: 1.5rem;
+        white-space:nowrap;
+    }
+    .expContainer .headingContainer p{
+        font-size: 1.15rem;
+        margin-left: 0;
+    }
+    .expContainer .codeContainer{
+        width: 95%;
+        margin-top: 1rem;
+    }
 }
