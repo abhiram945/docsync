@@ -7,7 +7,7 @@ const Nav = () => {
         <nav>
             <a className="flex alignCenter" href="/docsync/">
                 <img src="assets/logo.jpg" alt="logo" />
-                <h1>DocShare</h1>
+                <h1>DocSync</h1>
             </a>
         </nav>
     </>
