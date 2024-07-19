@@ -6,7 +6,7 @@ const Nav = () => {
     return <>
         <nav>
             <a className="flex alignCenter" href="/">
-                <img src="../assets/logo.jpg" alt="logo" />
+                <img src="assets/logo.jpg" alt="logo" />
                 <h1>DocShare</h1>
             </a>
         </nav>
