@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #0B0B2C;
 }
 .flex{
     display: flex;
@@ -18,6 +17,7 @@ nav{
 a{
     width: max-content;
     padding:2rem 5rem;
+    color: #0B0B2C;
 }
 a img{
     width: 2.5rem;
@@ -36,9 +36,6 @@ a h1{
 .mainContainer .expContainer .headingContainer{
     display: flex;
     padding: 0 5rem;
-}
-.mainContainer .expContainer .headingContainer h1 span{
-    color: #2C23D2;
 }
 .expContainer .headingContainer p{
     color: #2C23D2;
@@ -64,6 +61,37 @@ a h1{
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }
+.mainContainer h2{
+    color: #0B0B2C;
+    margin:2%;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.mainContainer .videosContainer{
+    width: 100%;
+    padding:1rem 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    background-color: #2C23D2;
+}
+.videosContainer .videoInfoContainer{
+    width: 100%;
+    height: 100%;
+}
+.videoInfoContainer p{
+    margin: 0.35rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.videoInfoContainer .videoContainer{
+    width: 100%;
+}
+.videoContainer iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
 
 @media screen and (max-width:480px){
     a{
@@ -84,5 +112,13 @@ a h1{
     .expContainer .codeContainer{
         width: 95%;
         margin-top: 1rem;
+    }
+    .mainContainer h2{
+        font-size: 1.5rem;
+        margin: 5% 2%;
+    }
+    .mainContainer .videosContainer{
+        grid-template-columns: 1fr;
+        padding: 1rem 0.5rem;
     }
 }
