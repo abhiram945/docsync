@@ -51,6 +51,18 @@ const Sc = () => {
                         <iframe src="https://www.youtube.com/embed/J-utjSeUq_c?si=Xj8DLEpnjSi0c1BU" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
+                <div className="videoInfoContainer">
+                    <p>Topic: Platfair Cipher (Part 1)</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/UURjVI5cw4g?si=jKDIsPh4XOw9Pj0R" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="videoInfoContainer">
+                    <p>Topic: Platfair Cipher (Part 2)</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/whEJfas9MAI?si=ZqK6zhoNrI-7vMeQ" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </main>
     </>

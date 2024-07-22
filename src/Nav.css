@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.flex{
+    display: flex;
+}
+.alignCenter{
+    align-items: center;
+}
+.spaceBetween{
+    justify-content: space-between;
+}
+nav{
+    width: 100%;
+    padding: 0 5rem;
+    box-shadow: 0 0 0.5rem #0B0B2C;
+    background-color: #ffffff;
+    position:sticky;
+    top:0;
+    z-index: 9;
+}
+a{
+    width: max-content;
+    padding:1rem 2rem;
+    color: #0B0B2C;
+}
+a img{
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+a h1{
+    font-size: 1.75rem;
+}
+.courseSelectionContainer button{
+    border: none;
+    padding:0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+.courseSelectionContainer button:first-child{
+    background-color: #0B0B2C;
+}
+.courseSelectionContainer button:last-child{
+    background-color: #3436F6;
+}
+
+@media screen and (max-width:480px){
+    nav{
+        padding: 0.5rem 0.25rem;
+    }
+    a img{
+        width: 1.75rem;
+        margin-right: 0.5rem;
+    }
+    a h1{
+        font-size: 1.25rem;
+    }
+    .courseSelectionContainer button{
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
