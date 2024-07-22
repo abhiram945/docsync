@@ -1,74 +1,30 @@
 import React, { useState } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import './App.css'
-const Nav = () => {
-    return <>
-        <nav>
-            <a className="flex alignCenter" href="/docsync/">
-                <img src="assets/logo.jpg" alt="logo" />
-                <h1>DocSync</h1>
-            </a>
-        </nav>
-    </>
-}
+import codesData from "./scCodes";
+import './Sc.css'
 
-const Main = () => {
-    
-const exp1CodeString = `name = input("Enter word: ")
-
-encrypted = ""
-decrypted = ""
-key = int(input("Enter key (0-9): "))
-for letter in name:
-    encrypted += chr(ord(letter) + key)
-print("Encrypted:", encrypted)
-for letter in encrypted:
-    decrypted += chr(ord(letter) - key)
-print("Decrypted:", decrypted)
-
-
-name = input("Enter word: ")
-encrypted = ""
-decrypted = ""
-for letter in name:
-    encrypted += str(ord(letter) - ord('a')) + " "
-print("Encrypted:", encrypted.strip())
-arr = encrypted.strip().split(" ")
-for num in arr:
-    decrypted += chr(int(num) + ord('a'))
-print("Decrypted:", decrypted)
-
-
-name = input("Enter word: ")
-encrypted = ""
-decrypted = ""
-print("Enter keys for encryption (0-9):")
-for letter in name:
-    key = int(input(f"Key for '{letter}': "))
-    encrypted += chr(ord(letter) + key)
-print("Encrypted:", encrypted)
-print("Enter keys for decryption (must match the encryption keys):")
-for letter in encrypted:
-    key = int(input(f"Key for '{letter}': "))
-    decrypted += chr(ord(letter) - key)
-print("Decrypted:", decrypted)
-`
+const Sc = () => {
     const [copy, setCopy]=useState(false);
     
     return <>
         <main className="mainContainer">
-            <div className="expContainer">
+            {
+                codesData.map((codeData, index)=><div className="expContainer">
                 <div className="headingContainer">
-                    <p>Exp No: 01 - Cipher Text Encryption and Decryption</p>
+                    <p>Exp No: {index+1} - {codeData.expName}</p>
                 </div>
                 <div className="codeContainer">
-                    <p onClick={(e)=>{setCopy(!copy);navigator.clipboard.writeText(exp1CodeString)}}>{copy ? 'Copied':'Copy code'}</p>
+                    <p onClick={(e)=>{setCopy(!copy);navigator.clipboard.writeText(codeData.code)}}>{copy ? 'Copied':'Copy code'}</p>
                     <SyntaxHighlighter language="python" style={docco} customStyle={{paddingLeft:'1rem', }}>
-                        {exp1CodeString}
+                        {codeData.code}
                     </SyntaxHighlighter>
                 </div>
             </div>
+                
+                )
+            }
+            
             <h2>Don't have enough time to find the correct video ? We got it...</h2>
             <div className="videosContainer">
                 <div className="videoInfoContainer">
@@ -100,11 +56,4 @@ print("Decrypted:", decrypted)
     </>
 }
 
-const App = () => {
-    return <>
-        <Nav />
-        <Main />
-    </>
-}
-
-export default App;
+export default Sc;
