@@ -45,10 +45,10 @@ a h1{
     cursor: pointer;
 }
 .courseSelectionContainer button:first-child{
-    background-color: #0B0B2C;
+    background-color: #3436F6;
 }
 .courseSelectionContainer button:last-child{
-    background-color: #3436F6;
+    background-color: #0B0B2C;
 }
 
 @media screen and (max-width:480px){

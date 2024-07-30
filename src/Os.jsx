@@ -26,6 +26,42 @@ const Os = () => {
                 <iframe src="https://www.youtube.com/embed/O6QO3J_85as?si=CtotfYoqt83J3FPV" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
+        <div className="videoInfoContainer">
+            <p>Topic: Transportation problem using North West & MODI method </p>
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/-w2z3MVTcQA?si=cWtdym401okpYCND" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div className="videoInfoContainer">
+            <p>Topic: Balanced Transportation problem using Least Cost method </p>
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/9tb6oRATVTw?si=0eqGzXEuRznsKNch" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div className="videoInfoContainer">
+            <p>Topic: Unbalanced Transportation problem using Least Cost method </p>
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/crHLxEWjBRM?si=jxhTvAsYPdauUbtc" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div className="videoInfoContainer">
+            <p>Topic: Balanced Transportation problem using Vogel's Approximation method </p>
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/z3zjieArlAE?si=lxOXbu_1_BxO2mtg" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div className="videoInfoContainer">
+            <p>Topic: Unbalanced Transportation problem using Vogel's Approximation method </p>
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/2g5TNBQMAII?si=jjCcizeaKFkNJnNT" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div className="videoInfoContainer">
+            <p>Topic: Assignment Problem </p>
+            <div className="videoContainer">
+                <iframe src="https://www.youtube.com/embed/rrfFTdO2Z7I?si=IONy25oaAqxjFUHx" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 }
 export default Os;

@@ -83,6 +83,45 @@ position_based_caesar_cipher()
 custom_key_caesar_cipher()
 `,
         expName : 'Cipher Text Encryption and Decryption',
+    },
+    {
+        code:`def monoAlphabetic():
+    name = input("Enter name: ")
+    chrArrLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    chrArrUpper = [c.upper() for c in chrArrLower]
+    encrypted = ""
+    decrypted = ""
+    key = int(input("Enter key: "))
+
+    for letter in name:
+        if letter.islower():
+            ascii_val = ord(letter)
+            index = ((ascii_val - 97) + key) % 26
+            encrypted += chrArrLower[index]
+        elif letter.isupper():
+            ascii_val = ord(letter)
+            index = ((ascii_val - 65) + key) % 26
+            encrypted += chrArrUpper[index]
+        else:
+            encrypted += letter
+    print("Encrypted:", encrypted)
+
+    for letter in encrypted:
+        if letter.islower():
+            ascii_val = ord(letter)
+            index = ((ascii_val - 97) - key) % 26
+            decrypted += chrArrLower[index]
+        elif letter.isupper():
+            ascii_val = ord(letter)
+            index = ((ascii_val - 65) - key) % 26
+            decrypted += chrArrUpper[index]
+        else:
+            decrypted += letter
+    print("Decrypted:", decrypted)
+
+monoAlphabetic()
+`,
+expName:'MonoAlphabetc Cipher',
     }
 ]
 

@@ -25,7 +25,7 @@ const Sc = () => {
                 )
             }
             
-            <h2>Don't have enough time to find the correct video ? We got it...</h2>
+            <h2>UNIT - 1</h2>
             <div className="videosContainer">
                 <div className="videoInfoContainer">
                     <p>Topic: Cryptography and types</p>
@@ -61,6 +61,18 @@ const Sc = () => {
                     <p>Topic: Platfair Cipher (Part 2)</p>
                     <div className="videoContainer">
                         <iframe src="https://www.youtube.com/embed/whEJfas9MAI?si=ZqK6zhoNrI-7vMeQ" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="videoInfoContainer">
+                    <p>Topic: Hill Cipher Encryption</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/GY-psGvlKgA?si=Mpyd2aaU6BEtmf-p" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="videoInfoContainer">
+                    <p>Topic: Hill Cipher Decryption</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/JnIHfnaY-_w?si=H5v8JZFtSgb3KEvj" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

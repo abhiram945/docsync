@@ -51,7 +51,7 @@
     padding:1rem 2.5rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+    gap: 2rem;
     background-color: #2C23D2;
 }
 .videosContainer .videoInfoContainer{
