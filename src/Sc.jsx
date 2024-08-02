@@ -52,6 +52,12 @@ const Sc = () => {
                     </div>
                 </div>
                 <div className="videoInfoContainer">
+                    <p>Topic: Ployalphabetic Cipher</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/Ic4BzVggNY8?si=d2DCbelT47S3Y8cV" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="videoInfoContainer">
                     <p>Topic: Platfair Cipher (Part 1)</p>
                     <div className="videoContainer">
                         <iframe src="https://www.youtube.com/embed/UURjVI5cw4g?si=jKDIsPh4XOw9Pj0R" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -73,6 +79,18 @@ const Sc = () => {
                     <p>Topic: Hill Cipher Decryption</p>
                     <div className="videoContainer">
                         <iframe src="https://www.youtube.com/embed/JnIHfnaY-_w?si=H5v8JZFtSgb3KEvj" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="videoInfoContainer">
+                    <p>Topic: Rail Fench Transposition Cipher</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/knE4G8DGLoY?si=1vDLA6f28bYHLNRe" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="videoInfoContainer">
+                    <p>Topic: Row Column Transposition Cipher</p>
+                    <div className="videoContainer">
+                        <iframe src="https://www.youtube.com/embed/cPQXaYUMOjQ?si=_yWNkaYvwP0JKYT8" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

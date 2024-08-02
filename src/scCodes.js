@@ -34,7 +34,7 @@ def position_based_caesar_cipher():
     for letter in name:
         if letter.isalpha():
             shift = ord('a') if letter.islower() else ord('A')
-            encrypted += str((ord(letter) - shift + 0) % 26) + " "  # No shift for simplicity
+            encrypted += str((ord(letter) - shift + 0) % 26) + " "
         else:
             encrypted += letter + " "
     
@@ -43,7 +43,7 @@ def position_based_caesar_cipher():
     arr = encrypted.strip().split(" ")
     for num in arr:
         if num.isdigit():
-            decrypted += chr(int(num) + ord('a'))  # Assuming input was all lowercase for simplicity
+            decrypted += chr(int(num) + ord('a'))
         else:
             decrypted += num
     
@@ -121,7 +121,24 @@ custom_key_caesar_cipher()
 
 monoAlphabetic()
 `,
-expName:'MonoAlphabetc Cipher',
+expName:'MonoAlphabetic Cipher',
+    },
+    {
+        code : `name = input("Enter your name : ").lower()
+key = input("Enter key : ").lower()
+encrypted=""
+decrypted=""
+for i in range(len(name)):
+    index_of_letter_in_name = ord(name[i])-ord('a')
+    index_of_letter_in_key = ord(key[i])-ord('a')
+    encrypted+=chr((index_of_letter_in_name+index_of_letter_in_key)%26+ord('a'))
+print(encrypted)
+for i in range(len(encrypted)):
+    index_of_letter_in_encrypted = ord(encrypted[i])-ord('a')
+    index_of_letter_in_key = ord(key[i])-ord('a')
+    decrypted+=chr((index_of_letter_in_encrypted-index_of_letter_in_key+26)%26+ord('a'))
+print(decrypted)`,
+expName:'PolyAlphabetic Cipher',
     }
 ]
 
