@@ -12,7 +12,7 @@ const Sc = () => {
             {
                 codesData.map((codeData, index)=><div className="expContainer">
                 <div className="headingContainer">
-                    <p>Exp No: {index+1} - {codeData.expName}</p>
+                    <p>Exp No: {codeData.expNo} - {codeData.expName}</p>
                 </div>
                 <div className="codeContainer">
                     <p onClick={(e)=>{setCopy(!copy);navigator.clipboard.writeText(codeData.code)}}>{copy ? 'Copied':'Copy code'}</p>

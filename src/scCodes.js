@@ -1,5 +1,6 @@
 const codesData = [
     {
+        expNo :1,
         code: `def simple_caesar_cipher():
     print("Simple Caesar Cipher")
     name = input("Enter word: ")
@@ -85,6 +86,7 @@ custom_key_caesar_cipher()
         expName : 'Cipher Text Encryption and Decryption',
     },
     {
+        expNo:'2a',
         code:`def monoAlphabetic():
     name = input("Enter name: ")
     chrArrLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -124,6 +126,7 @@ monoAlphabetic()
 expName:'MonoAlphabetic Cipher',
     },
     {
+        expNo : '2b',
         code : `name = input("Enter your name : ").lower()
 key = input("Enter key : ").lower()
 encrypted=""
