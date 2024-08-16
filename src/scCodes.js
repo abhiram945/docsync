@@ -249,7 +249,7 @@ def decrypt_aes(key, iv, ciphertext):
 
 if __name__ == "__main__":
     key = get_random_bytes(16)  # AES key must be 16, 24, or 32 bytes long
-    plaintext = "Hello, World!"
+    plaintext = input("Enter text : ")
     
     iv, ciphertext = encrypt_aes(key, plaintext)
     print(f"Ciphertext: {ciphertext}")
