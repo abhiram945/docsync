@@ -142,6 +142,91 @@ for i in range(len(encrypted)):
     decrypted+=chr((index_of_letter_in_encrypted-index_of_letter_in_key+26)%26+ord('a'))
 print(decrypted)`,
 expName:'PolyAlphabetic Cipher',
+    },
+    {
+        expNo:'3',
+        code :`import binascii
+def string_to_hex(s):
+    return binascii.hexlify(s.encode()).decode()
+def hex_to_bin(hex_str):
+    return bin(int(hex_str, 16))[2:].zfill(64)
+def bin_to_hex(bin_str):
+    return hex(int(bin_str, 2))[2:].zfill(16)
+def hex_to_string(hex_str):
+    return binascii.unhexlify(hex_str).decode()
+
+IP = [58, 50, 42, 34, 26, 18, 10, 2,
+      60, 52, 44, 36, 28, 20, 12, 4,
+      62, 54, 46, 38, 30, 22, 14, 6,
+      64, 56, 48, 40, 32, 24, 16, 8,
+      57, 49, 41, 33, 25, 17, 9, 1,
+      59, 51, 43, 35, 27, 19, 11, 3,
+      61, 53, 45, 37, 29, 21, 13, 5,
+      63, 55, 47, 39, 31, 23, 15, 7]
+FP = [40, 8, 48, 16, 56, 24, 64, 32,
+      39, 7, 47, 15, 55, 23, 63, 31,
+      38, 6, 46, 14, 54, 22, 62, 30,
+      37, 5, 45, 13, 53, 21, 61, 29,
+      36, 4, 44, 12, 52, 20, 60, 28,
+      35, 3, 43, 11, 51, 19, 59, 27,
+      34, 2, 42, 10, 50, 18, 58, 26,
+      33, 1, 41, 9, 49, 17, 57, 25]
+def key_generator(key):
+    return key
+def des_round(L, R, key, round_number):
+    newR = L
+    newL = R
+    print(f"Round {round_number}:")
+    print(f"  newL: {newL}")
+    print(f"  newR: {newR}")
+    return newL, newR
+def des_encrypt(plaintext, key):
+    hex_plaintext = string_to_hex(plaintext)
+    binary_plaintext = hex_to_bin(hex_plaintext)
+    permuted_input = ''.join([binary_plaintext[i-1] for i in IP])
+    L = permuted_input[:32]
+    R = permuted_input[32:]
+    for i in range(1, 17):
+        key = key_generator(key)
+        L, R = des_round(L, R, key, i)
+    
+    swapped_output = R + L
+    
+    cipher_binary = ''.join([swapped_output[i-1] for i in FP])
+    
+    cipher_hex = bin_to_hex(cipher_binary)
+    return cipher_hex
+
+def des_decrypt(cipher_hex, key):
+    binary_ciphertext = hex_to_bin(cipher_hex)
+    
+    permuted_input = ''.join([binary_ciphertext[i-1] for i in IP])
+    
+    L = permuted_input[:32]
+    R = permuted_input[32:]
+    
+    for i in range(1, 17):
+        key = key_generator(key)
+        L, R = des_round(L, R, key, i)
+    
+    swapped_output = R + L
+    
+    plain_binary = ''.join([swapped_output[i-1] for i in FP])
+    
+    plain_hex = bin_to_hex(plain_binary)
+    plaintext = hex_to_string(plain_hex)
+    return plaintext
+
+plaintext = input("Enter plain text : ")
+key = input("Enter 64 bit key (Eg : 133457799BBCDFF1) : ")
+
+cipher_hex = des_encrypt(plaintext, key)
+print(f"Encrypted Text : {cipher_hex}")
+
+decrypted_text = des_decrypt(cipher_hex, key)
+print(f"Decrypted Text : {decrypted_text}")
+`,
+expName:'Data Encryption Standard',
     }
 ]
 
