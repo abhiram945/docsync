@@ -227,6 +227,36 @@ decrypted_text = des_decrypt(cipher_hex, key)
 print(f"Decrypted Text : {decrypted_text}")
 `,
 expName:'Data Encryption Standard',
+    },
+    {
+        expNo:'4',
+        expName:'Advance Encryption Standard',
+        code:`#pip install pycryptodome
+
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Random import get_random_bytes
+
+def encrypt_aes(key, plaintext):
+    cipher = AES.new(key, AES.MODE_CBC)
+    ciphertext = cipher.encrypt(pad(plaintext.encode(), AES.block_size))
+    return cipher.iv, ciphertext
+
+def decrypt_aes(key, iv, ciphertext):
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    plaintext = unpad(cipher.decrypt(ciphertext), AES.block_size)
+    return plaintext.decode()
+
+if __name__ == "__main__":
+    key = get_random_bytes(16)  # AES key must be 16, 24, or 32 bytes long
+    plaintext = "Hello, World!"
+    
+    iv, ciphertext = encrypt_aes(key, plaintext)
+    print(f"Ciphertext: {ciphertext}")
+
+    decrypted_text = decrypt_aes(key, iv, ciphertext)
+    print(f"Decrypted Text: {decrypted_text}")
+`,
     }
 ]
 
