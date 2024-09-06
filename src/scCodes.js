@@ -1,6 +1,6 @@
 const codesData = [
     {
-        expNo :1,
+        expNo: 1,
         code: `def simple_caesar_cipher():
     print("Simple Caesar Cipher")
     name = input("Enter word: ")
@@ -83,11 +83,11 @@ simple_caesar_cipher()
 position_based_caesar_cipher()
 custom_key_caesar_cipher()
 `,
-        expName : 'Cipher Text Encryption and Decryption',
+        expName: 'Cipher Text Encryption and Decryption',
     },
     {
-        expNo:'2a',
-        code:`def monoAlphabetic():
+        expNo: '2a',
+        code: `def monoAlphabetic():
     name = input("Enter name: ")
     chrArrLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     chrArrUpper = [c.upper() for c in chrArrLower]
@@ -123,11 +123,11 @@ custom_key_caesar_cipher()
 
 monoAlphabetic()
 `,
-expName:'MonoAlphabetic Cipher',
+        expName: 'MonoAlphabetic Cipher',
     },
     {
-        expNo : '2b',
-        code : `name = input("Enter your name : ").lower()
+        expNo: '2b',
+        code: `name = input("Enter your name : ").lower()
 key = input("Enter key : ").lower()
 encrypted=""
 decrypted=""
@@ -141,11 +141,11 @@ for i in range(len(encrypted)):
     index_of_letter_in_key = ord(key[i])-ord('a')
     decrypted+=chr((index_of_letter_in_encrypted-index_of_letter_in_key+26)%26+ord('a'))
 print(decrypted)`,
-expName:'PolyAlphabetic Cipher',
+        expName: 'PolyAlphabetic Cipher',
     },
     {
-        expNo:'3',
-        code :`import binascii
+        expNo: '3',
+        code: `import binascii
 def string_to_hex(s):
     return binascii.hexlify(s.encode()).decode()
 def hex_to_bin(hex_str):
@@ -226,12 +226,12 @@ print(f"Encrypted Text : {cipher_hex}")
 decrypted_text = des_decrypt(cipher_hex, key)
 print(f"Decrypted Text : {decrypted_text}")
 `,
-expName:'Data Encryption Standard',
+        expName: 'Data Encryption Standard',
     },
     {
-        expNo:'4',
-        expName:'Advance Encryption Standard',
-        code:`#pip install pycryptodome
+        expNo: '4',
+        expName: 'Advance Encryption Standard',
+        code: `#pip install pycryptodome
 
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
@@ -257,6 +257,50 @@ if __name__ == "__main__":
     decrypted_text = decrypt_aes(key, iv, ciphertext)
     print(f"Decrypted Text: {decrypted_text}")
 `,
+    },
+    {
+        expNo: 5,
+        expName: "RSA Algorithm",
+        code: `from Crypto.Util import number
+from Crypto.Random import get_random_bytes
+
+def generate_keys(bit_length=1024):
+    p = number.getPrime(bit_length, get_random_bytes)
+    q = number.getPrime(bit_length, get_random_bytes)
+    n = p * q
+    phi_n = (p - 1) * (q - 1)
+    e = 65537
+    d = pow(e, -1, phi_n)
+    return (e, n), (d, n)
+
+def encrypt(plaintext, public_key):
+    e, n = public_key
+    m = int.from_bytes(plaintext.encode('utf-8'), byteorder='big')
+    c = pow(m, e, n)
+    return c
+
+def decrypt(ciphertext, private_key):
+    d, n = private_key
+    m = pow(ciphertext, d, n)
+    plaintext = m.to_bytes((m.bit_length() + 7) // 8, byteorder='big').decode('utf-8')
+    return plaintext
+
+public_key, private_key = generate_keys()
+print("Public Key:", public_key)
+print("\\n")
+print("Private Key:", private_key)
+print("\\n")
+plaintext = input("Enter text : ")
+print("\\n")
+print("Plaintext:", plaintext)
+print("\\n")
+ciphertext = encrypt(plaintext, public_key)
+print("Ciphertext:", ciphertext)
+print("\\n")
+decrypted_message = decrypt(ciphertext, private_key)
+print("Decrypted Message:", decrypted_message)
+print("\\n")
+`
     }
 ]
 
