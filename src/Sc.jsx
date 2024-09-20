@@ -10,7 +10,7 @@ const Sc = () => {
     return <>
         <main className="mainContainer">
             {
-                codesData.map((codeData, index)=><div className="expContainer">
+                codesData.map((codeData, index)=><div className="expContainer" key={index}>
                 <div className="headingContainer">
                     <p>Exp No: {codeData.expNo} - {codeData.expName}</p>
                 </div>
