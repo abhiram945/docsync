@@ -301,6 +301,39 @@ decrypted_message = decrypt(ciphertext, private_key)
 print("Decrypted Message:", decrypted_message)
 print("\\n")
 `
+    },
+    {
+        expNo:6,
+        expName:"Diffie-Hellman Key exchange algorithm",
+        code: `import random
+import tkinter as tk
+from tkinter import simpledialog, messagebox
+def generate_prime():
+    return 23
+def calculate_shared_key(private_key, base, prime):
+    return (base ** private_key) % prime
+userA_color = simpledialog.askstring("Input", "User A, enter a color name:")
+prime = generate_prime()
+base = 5
+private_key_A = random.randint(1, 10)
+public_key_A = calculate_shared_key(private_key_A, base, prime)
+private_key_B = random.randint(1, 10)
+public_key_B = calculate_shared_key(private_key_B, base, prime)
+shared_key_A = calculate_shared_key(private_key_B, public_key_A, prime)
+shared_key_B = calculate_shared_key(private_key_A, public_key_B, prime)
+if shared_key_A == shared_key_B:
+    print("Key exchange successful!")
+    print(f"User A: Private Key = {private_key_A}, Public Key = {public_key_A}, Shared Key = {shared_key_A}")
+    print(f"User B: Private Key = {private_key_B}, Public Key = {public_key_B}, Shared Key = {shared_key_B}")
+    root = tk.Tk()
+    root.title("Color from User A")
+    color_frame = tk.Frame(root, bg=userA_color, width=200, height=200)
+    color_frame.pack_propagate(False)
+    color_frame.pack()
+    root.mainloop()
+else:
+    print("Key exchange failed.")
+`
     }
 ]
 
